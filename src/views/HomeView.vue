@@ -136,9 +136,9 @@
       </div>
     </section>
 
-
+    <AIApplication/>
     <section class="">
-      <h3 class=" Noto-Sans-TC-900 text-white fs-48 text-center">
+      <h3 class="Noto-Sans-TC-900 text-white fs-48 text-center">
         現在就來建立屬於你的服務吧
       </h3>
       <button type="button" class="btn btn-dark  Noto-Sans-TC-900 text-white fs-20">
@@ -169,75 +169,16 @@
           <p class="Noto-Sans-TC-900 text-white fs-16 text-decoration-none px-2">Back to top</p>
         </div>
       </div>
-    </footer> 
+    </footer>
   </div>
 
 </template>
 
 <script>
-import { mapState, mapActions } from 'pinia'
-import gsapStore from '@/stores/gsapStore'
-import timeStore from '@/stores/timeStore'
-import AOS from 'aos'
-import { Vue3Lottie } from 'vue3-lottie'
-import 'vue3-lottie/dist/style.css'
-import swipeUp from '@/assets/json/swipe_up.json'
-import loading from '@/assets/json/loading.json'
-import scrollDown from '@/assets/json/scroll_down.json'
+import AIApplication from '@/components/AIApplication.vue'
 export default {
   components: {
-    Vue3Lottie
-  },
-  data () {
-    return {
-      swipeUp,
-      loading,
-      scrollDown,
-      isLoading: true,
-      freeGoodies: false
-    }
-  },
-  computed: {
-    ...mapState(timeStore, ['dateline'])
-  },
-  methods: {
-    ...mapActions(gsapStore, ['bannerAnimation', 'ChallengeAnimation', 'awardsAnimation', 'loadingAnimation']),
-    ...mapActions(timeStore, ['getTime']),
-    moveToChallenge () {
-      window.scrollTo({
-        top: 1780,
-        behavior: 'smooth' // smooth(平滑滚动),instant(瞬间滚动),默认值 auto
-      })
-    },
-    moveToInstructions () {
-      window.scrollTo({
-        top: 3880,
-        behavior: 'smooth'
-      })
-    },
-    scrollStop () {
-      const mo = function (e) { e.preventDefault() }
-      document.body.style.overflow = 'hidden'
-      document.addEventListener('touchmove', mo, false)
-    },
-    scrollMove () {
-      const mo = function (e) { e.preventDefault() }
-      document.body.style.overflow = ''
-      document.removeEventListener('touchmove', mo, false)
-    }
-  },
-  mounted () {
-    this.loadingAnimation()
-    this.bannerAnimation()
-    this.ChallengeAnimation()
-    this.awardsAnimation()
-    this.getTime()
-    this.scrollStop()
-    setTimeout(() => {
-      this.scrollMove()
-      this.isLoading = false
-    }, 5000)
-    AOS.init()
+    AIApplication
   }
 }
 </script>
