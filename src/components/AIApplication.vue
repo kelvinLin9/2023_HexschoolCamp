@@ -1,21 +1,30 @@
 <template>
-  <div class="application d-flex flex-column align-items-center">
-    <h3 class="Noto-Sans-TC-900 text-center fs-80 my-5">
+  <div class="application test">
+    <h3 class="Noto-Sans-TC-900 text-center fs-80 mt-5 test">
       這些超酷的應用，都來自 AI工具王
     </h3>
     <div class="search d-flex align-items-center">
-      <img src="" alt="">
-      <span>輸入關鍵字搜尋</span>
+      <input type="search" class="form-control" id="search" placeholder=""
+          v-model="cacheSearch">
+          <label for="search">
+            <img src="../assets/images/Vector-15.png" alt="">
+            <span class="Noto-Sans-TC-400 fs-16 ms-2">輸入關鍵字搜尋</span>
+          </label>
     </div>
-    <div class="filter">
-      <div class="">篩選</div>
-      <div class=""></div>
-      <div class="">由新到舊</div>
+    <div class="filter d-flex justify-content-between align-items-center my-3">
+      <div class="Noto-Sans-TC-400 fs-16">篩選</div>
+      <div class="">
+        <button type="button" class="btn Noto-Sans-TC-700 fs-16 mx-1"
+          v-for="item in tagName" :key="item">
+          {{ item }}
+        </button>
+      </div>
+      <div class="Noto-Sans-TC-400 ">由新到舊</div>
     </div>
-    <!-- 接AI -->
-    <div class="card container">
+    <!-- 接AI區塊 -->
+    <div class="container mb-5">
       <div class="row">
-        <div class="col-sm-4 col-12 g-3"
+        <div class="card-container col-sm-4 col-12 g-5"
               v-for="item in Products" :key="item.imageUrl">
           <div class="card-pic">
             <img :src="item.imageUrl" alt="img">
@@ -51,6 +60,7 @@
 export default {
   data () {
     return {
+      tagName: ['全部', '聊天', '影像辨識', '翻譯', '行動', '客服', '生產力'],
       Products: [
         {
           imageUrl: 'https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool1.png?raw=true',
@@ -108,36 +118,54 @@ export default {
 
 <style scoped lang="scss">
 .application {
-  width: 1920px;
+  max-width: 1920px;
   height: 1918px;
   background: #FFFFFF;
   border-radius: 160px;
 }
-.search { 
-  width: 1296px;
-  height: 64px;
-  background: #F2F2F2;
-  border-radius: 16px;
+.search {
+  color: #919191;
+  position: relative;
+  input{
+    width: 1296px;
+    height: 64px;
+    background: #F2F2F2;
+    border-radius: 16px;
+    border: 0;
+  }
+  label {
+    position:absolute;
+    left: 40px;
+  }
 }
-.card {
-  border: 1px solid #F2F2F2;
-  border-radius: 16px;
+.filter{
+  width: 1296px;
+  .btn {
+    padding: 8px 16px;
+    background: #F2F2F2;
+    border-radius: 16px;
+  }
+}
+.card-container {
+  // border: 1px solid #F2F2F2;
 }
 .card-pic {
-  // width: 416px;
-  // height: 312px;
+  img{
+    width: 100%;
+    border-radius:16px 16px 0 0;
+  }
 }
 .card-title {
   padding: 20px 32px 12px;
-  border: 1px solid #F2F2F2;
+  border-bottom: 1px solid #F2F2F2;
   height: 118px;
 }
 .card-sub-title {
   padding: 20px 32px 12px;
-  border: 1px solid #F2F2F2;
+  border-bottom: 1px solid #F2F2F2;
 }
 .card-tag {
   padding: 20px 32px 12px;
-  border: 1px solid #F2F2F2;
+  border-bottom: 1px solid #F2F2F2;
 }
 </style>
