@@ -1,56 +1,65 @@
 <template>
   <div class="application test">
-    <h3 class="Noto-Sans-TC-900 text-center fs-80 mt-5 test">
-      這些超酷的應用，都來自 AI工具王
-    </h3>
-    <div class="search d-flex align-items-center">
-      <input type="search" class="form-control" id="search" placeholder=""
-          v-model="cacheSearch">
-          <label for="search">
-            <img src="../assets/images/Vector-15.png" alt="">
-            <span class="Noto-Sans-TC-400 fs-16 ms-2">輸入關鍵字搜尋</span>
-          </label>
-    </div>
-    <div class="filter d-flex justify-content-between align-items-center my-3">
-      <div class="Noto-Sans-TC-400 fs-16">篩選</div>
-      <div class="">
-        <button type="button" class="btn Noto-Sans-TC-700 fs-16 mx-1"
-          v-for="item in tagName" :key="item">
-          {{ item }}
-        </button>
-      </div>
-      <div class="Noto-Sans-TC-400 ">由新到舊</div>
-    </div>
-    <!-- 接AI區塊 -->
-    <div class="container mb-5">
+    <div class="container">
+      <h3 class="Noto-Sans-TC-900 text-center fs-80">
+        這些超酷的應用，都來自 AI工具王
+      </h3>
       <div class="row">
-        <div class="card-container col-sm-4 col-12 g-5"
-              v-for="item in Products" :key="item.imageUrl">
-          <div class="card-pic">
-            <img :src="item.imageUrl" alt="img">
-          </div>
-          <div class="card-title">
-            <h3 class="Noto-Sans-TC-900 fs-20">
-              {{item.title}}
-            </h3>
-            <p class="Noto-Sans-TC-400 fs-14">
-              {{item.description}}
-            </p>
-          </div>
-          <div class="card-sub-title d-flex justify-content-between align-items-center">
-            <h4 class="Noto-Sans-TC-700 fs-16"> {{item.subTitle}} </h4>
-            <span class="Noto-Sans-TC-400 fs-16"> {{item.auth}} </span>
-          </div>
-          <div class="card-tag d-flex justify-content-between align-items-center">
-            <a href="#" class="Noto-Sans-TC-400 fs-16 text-decoration-none text-dark">
-              {{item.tag}}
-            </a>
-            <a href="#" class="Noto-Sans-TC-400 fs-16 text-decoration-none text-dark">
-              <span class="">share</span>
-            </a>
-          </div>
+        <div class="search col-12 d-flex align-items-center">
+          <input type="search" class="form-control" id="search" placeholder=""
+              v-model="cacheSearch">
+              <label for="search">
+                <img src="../assets/images/Vector-15.png" alt="">
+                <span class="Noto-Sans-TC-400 fs-16 ms-2">輸入關鍵字搜尋</span>
+              </label>
         </div>
+        <div class="filter d-flex justify-content-between align-items-center">
+          <button type="button" class="">
+            <span class="Noto-Sans-TC-400 fs-16">篩選</span>
+            <img src="../assets/images/Vector-13.png" alt="">
+          </button>
+          <div class="">
+            <button type="button" class="btn Noto-Sans-TC-700 fs-16 mx-1"
+              v-for="item in tagName" :key="item">
+              {{ item }}
+            </button>
+          </div>
+          <div class="Noto-Sans-TC-400 ">由新到舊</div>
         </div>
+        <!-- 接AI區塊 -->
+        <div class="container mb-5">
+          <div class="row">
+            <div class=" col-sm-4 col-12 gy-3"
+                  v-for="item in Products" :key="item.imageUrl">
+              <div class="card-container">
+                <div class="card-pic">
+                  <img :src="item.imageUrl" alt="img">
+                </div>
+                <div class="card-title">
+                  <p class="Noto-Sans-TC-900 fs-20">
+                    {{ item.title }}
+                  </p>
+                  <p class="Noto-Sans-TC-400 fs-14">
+                    {{ item.description }}
+                  </p>
+                </div>
+                <div class="card-sub-title d-flex justify-content-between align-items-center">
+                  <h4 class="Noto-Sans-TC-700 fs-16"> {{ item.subTitle }} </h4>
+                  <span class="Noto-Sans-TC-400 fs-16"> {{ item.auth }} </span>
+                </div>
+                <div class="card-tag d-flex justify-content-between align-items-center">
+                  <a href="#" class="Noto-Sans-TC-400 fs-16 text-decoration-none text-dark">
+                    {{ item.tag }}
+                  </a>
+                  <a href="#" class="Noto-Sans-TC-400 fs-16 text-decoration-none text-dark">
+                    <span class="">share</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -118,10 +127,11 @@ export default {
 
 <style scoped lang="scss">
 .application {
-  max-width: 1920px;
-  height: 1918px;
   background: #FFFFFF;
   border-radius: 160px;
+  h3 {
+    padding: 160px 0 80px;
+  }
 }
 .search {
   color: #919191;
@@ -140,6 +150,7 @@ export default {
 }
 .filter{
   width: 1296px;
+  padding: 44px 40px 40px;
   .btn {
     padding: 8px 16px;
     background: #F2F2F2;
@@ -147,18 +158,25 @@ export default {
   }
 }
 .card-container {
-  // border: 1px solid #F2F2F2;
+  border: 1px solid #F2F2F2;
+  border-radius:16px;
 }
 .card-pic {
+  overflow: hidden;
   img{
     width: 100%;
     border-radius:16px 16px 0 0;
+    transform: scale(1);
+      transition: all 0.5s;
+    &:hover {
+      transform: scale(1.3);
+      transition: all 0.5s;
+    }
   }
 }
 .card-title {
   padding: 20px 32px 12px;
   border-bottom: 1px solid #F2F2F2;
-  height: 118px;
 }
 .card-sub-title {
   padding: 20px 32px 12px;

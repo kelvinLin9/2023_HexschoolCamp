@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-full bg-dark">
+  <div class="container-fluid bg-dark">
     <router-view></router-view>
   </div>
 </template>
