@@ -29,7 +29,7 @@
         <!-- 接AI區塊 -->
         <div class="container mb-5">
           <div class="row">
-            <div class=" col-sm-4 col-12 gy-3"
+            <div class="col-sm-4 col-12 gy-3"
                   v-for="item in Products" :key="item.imageUrl">
               <div class="card-container">
                 <div class="card-pic">
@@ -57,7 +57,25 @@
                 </div>
               </div>
             </div>
+            <div class="row justify-content-end">
+              <div class="col-3 mt-3">
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
