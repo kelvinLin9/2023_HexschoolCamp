@@ -1,5 +1,5 @@
 <template>
-  <div class="application test">
+  <div class="application">
     <div class="container">
       <h3 class="Noto-Sans-TC-900 text-center fs-80">
         這些超酷的應用，都來自 AI工具王
@@ -13,23 +13,38 @@
                 <span class="Noto-Sans-TC-400 fs-16 ms-2">輸入關鍵字搜尋</span>
               </label>
         </div>
-        <div class="filter d-flex justify-content-between align-items-center">
-          <button type="button" class="">
-            <span class="Noto-Sans-TC-400 fs-16">篩選</span>
-            <img src="../assets/images/Vector-13.png" alt="">
-          </button>
-          <div class="">
-            <button type="button" class="btn Noto-Sans-TC-700 fs-16 mx-1"
-              v-for="item in tagName" :key="item">
-              {{ item }}
+        <div class="filter col-12">
+          <div class="row d-flex align-items-center">
+            <div class="col-6 col-sm-2 d-flex justify-content-star align-items-center">
+              <button type="button">
+                <span class="Noto-Sans-TC-400 fs-16 me-2">篩選</span>
+                <img src="../assets/images/Vector-16.png" alt="篩選圖示">
+              </button>
+            </div>
+            <div class="col-8 d-none d-sm-block">
+              <button type="button" class="btn-sm Noto-Sans-TC-700 fs-16 mx-1"
+                v-for="item in tagName" :key="item">
+                {{ item }}
             </button>
+            </div>
+            <div class="col-6 col-sm-2 d-flex justify-content-end align-items-center">
+              <button type="button">
+                <span class="Noto-Sans-TC-400 fs-16 me-2">由新到舊</span>
+                <img src="../assets/images/Vector-13.png" alt="漏斗圖示">
+              </button>
+            </div>
+            <div class="col-12 d-block d-sm-none">
+              <button type="button" class="btn-sm Noto-Sans-TC-700 fs-16 mx-1"
+                v-for="item in tagName" :key="item">
+                {{ item }}
+              </button>
+            </div>
           </div>
-          <div class="Noto-Sans-TC-400 ">由新到舊</div>
-        </div>
+          </div>
         <!-- 接AI區塊 -->
         <div class="container mb-5">
           <div class="row">
-            <div class="col-sm-4 col-12 gy-3"
+            <div class="col-sm-4 col-12 gy-3 d-flex align-items-stretch"
                   v-for="item in Products" :key="item.imageUrl">
               <div class="card-container">
                 <div class="card-pic">
@@ -57,23 +72,21 @@
                 </div>
               </div>
             </div>
-            <div class="row justify-content-end">
-              <div class="col-3 mt-3">
-                <nav aria-label="Page navigation example">
-                  <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+            <div class="col-12 col-sm-3 mt-3 ms-sm-auto d-flex justify-content-center justify-content-sm-end">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination Noto-Sans-TC-700 fs-14">
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
@@ -147,6 +160,9 @@ export default {
 .application {
   background: #FFFFFF;
   border-radius: 160px;
+  @media (max-width: 576px) {
+    border-radius: 20px;
+  }
   h3 {
     padding: 160px 0 80px;
   }
@@ -169,39 +185,52 @@ export default {
 .filter{
   width: 1296px;
   padding: 44px 40px 40px;
-  .btn {
-    padding: 8px 16px;
-    background: #F2F2F2;
+  button {
+    width: 132px;
+    height: 64px;
+    background: #FFFFFF;
+    border: 1px solid #F2F2F2;
+    border-radius: 16px;
+  }
+  .btn-sm {
+    width: 80px;
+    height: 40px;
+    color: #919191;
+    background: #FFFFFF;
     border-radius: 16px;
   }
 }
 .card-container {
   border: 1px solid #F2F2F2;
   border-radius:16px;
-}
-.card-pic {
-  overflow: hidden;
-  img{
-    width: 100%;
-    border-radius:16px 16px 0 0;
-    transform: scale(1);
-      transition: all 0.5s;
-    &:hover {
-      transform: scale(1.3);
-      transition: all 0.5s;
+  .card-pic {
+    overflow: hidden;
+    img{
+      width: 100%;
+      border-radius:16px 16px 0 0;
+      transform: scale(1);
+        transition: all 0.5s;
+      &:hover {
+        transform: scale(1.3);
+        transition: all 0.5s;
+      }
     }
   }
+  .card-title {
+    padding: 20px 32px 12px;
+    border-bottom: 1px solid #F2F2F2;
+  }
+  .card-sub-title {
+    padding: 20px 32px 12px;
+    border-bottom: 1px solid #F2F2F2;
+  }
+  .card-tag {
+    padding: 20px 32px 12px;
+  }
 }
-.card-title {
-  padding: 20px 32px 12px;
-  border-bottom: 1px solid #F2F2F2;
-}
-.card-sub-title {
-  padding: 20px 32px 12px;
-  border-bottom: 1px solid #F2F2F2;
-}
-.card-tag {
-  padding: 20px 32px 12px;
-  border-bottom: 1px solid #F2F2F2;
+.page-link {
+  color: black;
+  border: 0px solid #F2F2F2;
+  border-radius: 16px;
 }
 </style>
