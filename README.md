@@ -1,5 +1,5 @@
-# 2022 F2E 4th Week-1 | 互動式網站設計
-![](https://i.imgur.com/fBPL6fN.png)
+# 2023 六角體驗營作品
+<!-- ![](https://i.imgur.com/fBPL6fN.png) -->
 
 ## 專案簡介
 
@@ -23,10 +23,10 @@ https://kelvinlin9.github.io/F2E_Week1/#/
 
 
 ## 使用套件
-- GSAP
-- vue3-lottie
-- pinia
-- AOS
+<!-- - GSAP -->
+<!-- - vue3-lottie -->
+<!-- - pinia -->
+<!-- - AOS -->
 
 
 
