@@ -28,5 +28,59 @@ export default defineStore('apiStore', {
         console.log('QQ')
       })
     }
+  },
+  getters: {
+    filterWorksData () {
+      let filterWorksData
+      if (this.cacheSearch === '') {
+        switch (this.category) {
+          case 'all':
+            filterWorksData = this.worksData.filter((item) => {
+              return item
+            })
+            break
+          case 'S':
+            filterWorksData = this.worksData.filter((item) => {
+              return item.category === 'S'
+            })
+            break
+          case 'A':
+            filterWorksData = this.worksData.filter((item) => {
+              return item.category === 'A'
+            })
+            break
+          case 'B':
+            filterWorksData = this.worksData.filter((item) => {
+              return item.category === 'B'
+            })
+            break
+          case 'C':
+            filterWorksData = this.worksData.filter((item) => {
+              return item.category === 'C'
+            })
+            break
+          case '馬鞍':
+            filterWorksData = this.worksData.filter((item) => {
+              return item.description === '馬鞍'
+            })
+            break
+          case '馬蹄鐵':
+            filterWorksData = this.worksData.filter((item) => {
+              return item.description === '馬蹄鐵'
+            })
+            break
+          case '馬飼料':
+            filterWorksData = this.worksData.filter((item) => {
+              return item.description === '馬飼料'
+            })
+            break
+        }
+        return filterWorksData
+      } else {
+        return this.worksData.filter((item) => {
+          return item.title.match(this.cacheSearch)
+        })
+      }
+    }
   }
 })

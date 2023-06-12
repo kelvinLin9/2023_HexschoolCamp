@@ -48,7 +48,7 @@
       </li>
     </ul>
   </section>
-  <section class="evaluate container my-5">
+  <!-- <section class="evaluate container my-5">
     <ul class="row">
       <li class="col-4 d-flex align-items-stretch">
         <div class="evaluate-bg">
@@ -133,8 +133,9 @@
         </div>
       </li>
     </ul>
-  </section>
-
+  </section> -->
+  
+  <EvaluateView/>
   <AIApplication/>
 
   <section class="start-use container my-5">
@@ -157,10 +158,12 @@
 <script>
 import AIApplication from '@/components/AIApplication.vue'
 import GrassAnima from '@/components/GrassAnima.vue'
+import EvaluateView from '@/components/EvaluateView.vue'
 export default {
   components: {
     AIApplication,
-    GrassAnima
+    GrassAnima,
+    EvaluateView
   }
 }
 </script>
