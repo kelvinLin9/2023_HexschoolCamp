@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 2023 六角體驗營作品
 <!-- ![](https://i.imgur.com/fBPL6fN.png) -->
 
@@ -40,3 +41,7 @@ npm install
 npm run serve
 ```
 
+=======
+
+
+>>>>>>> 8f2c68cb1e741c5275bf2c4a7e72e08466e4a748
