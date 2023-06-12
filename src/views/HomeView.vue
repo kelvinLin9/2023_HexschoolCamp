@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png"
-                alt="AI工具王" width="240" height="40" class="d-inline-block align-text-top">
+                alt="AI工具王" class="d-inline-block align-text-top">
         </a>
         <button class="navbar-toggler" type="button"
         data-bs-toggle="collapse"
@@ -48,5 +48,15 @@ export default {
 <style lang="scss" scoped>
 .navbar {
   border-bottom: solid 1px white;
+  img {
+    width: 240px;
+    height: 40px;
+  }
+  @media (max-width: 576px) {
+    img {
+      width: 145px;
+      height: 24px;
+    }
+  }
 }
 </style>

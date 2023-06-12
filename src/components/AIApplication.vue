@@ -15,17 +15,19 @@
         </div>
         <div class="filter col-12">
           <div class="row d-flex align-items-center">
-            <div class="col-6 col-sm-2 d-flex justify-content-star align-items-center">
+            <div class="col-6 col-sm-2">
               <button type="button">
                 <span class="Noto-Sans-TC-400 fs-16 me-2">篩選</span>
                 <img src="../assets/images/Vector-16.png" alt="篩選圖示">
               </button>
             </div>
             <div class="col-8 d-none d-sm-block">
-              <button type="button" class="btn-sm Noto-Sans-TC-700 fs-16 mx-1"
-                v-for="item in tagName" :key="item">
-                {{ item }}
-            </button>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn-sm Noto-Sans-TC-700 fs-16 mx-1"
+                  v-for="item in tagName" :key="item">
+                  {{ item }}
+                </button>
+              </div>
             </div>
             <div class="col-6 col-sm-2 d-flex justify-content-end align-items-center">
               <button type="button">
@@ -45,7 +47,7 @@
         <div class="container mb-5">
           <div class="row">
             <div class="col-sm-4 col-12 gy-3 d-flex align-items-stretch"
-                  v-for="item in Products" :key="item.imageUrl">
+                  v-for="item in worksData" :key="item.imageUrl">
               <div class="card-container">
                 <div class="card-pic">
                   <img :src="item.imageUrl" alt="img">
@@ -54,17 +56,17 @@
                   <p class="Noto-Sans-TC-900 fs-20">
                     {{ item.title }}
                   </p>
-                  <p class="Noto-Sans-TC-400 fs-14">
+                  <p class="Noto-Sans-TC-400 fs-14 ">
                     {{ item.description }}
                   </p>
                 </div>
                 <div class="card-sub-title d-flex justify-content-between align-items-center">
                   <h4 class="Noto-Sans-TC-700 fs-16"> {{ item.subTitle }} </h4>
-                  <span class="Noto-Sans-TC-400 fs-16"> {{ item.auth }} </span>
+                  <span class="Noto-Sans-TC-400 fs-16"> {{ item.model }} </span>
                 </div>
                 <div class="card-tag d-flex justify-content-between align-items-center">
                   <a href="#" class="Noto-Sans-TC-400 fs-16 text-decoration-none text-dark">
-                    {{ item.tag }}
+                    {{ item.type }}
                   </a>
                   <a href="#" class="Noto-Sans-TC-400 fs-16 text-decoration-none text-dark">
                     <span class="">share</span>
@@ -97,61 +99,26 @@
 </template>
 
 <script>
+import { mapState, mapActions, mapWritableState } from 'pinia'
+import apiStore from '@/stores/apiStore'
 export default {
-  data () {
-    return {
-      tagName: ['全部', '聊天', '影像辨識', '翻譯', '行動', '客服', '生產力'],
-      Products: [
-        {
-          imageUrl: 'https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool1.png?raw=true',
-          title: 'Chatbot Builder',
-          description: '建立智能化的聊天機器人，解答常見問題、提供客戶支援、收集反饋等。',
-          subTitle: 'AI 模型',
-          auth: '卡卡',
-          tag: '#聊天'
-        },
-        {
-          imageUrl: 'https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool2.png?raw=true',
-          title: 'Image Recognition Platform',
-          description: '專業的圖像識別平台，識別圖像、分類、標記等。',
-          subTitle: 'AI 模型',
-          auth: '杰杰',
-          tag: '#影像辨識'
-        },
-        {
-          imageUrl: 'https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool3.png?raw=true',
-          title: 'Language Translation API',
-          description: '專業的語言翻譯 API，實現文本翻譯功能，支援多種格式的文本。',
-          subTitle: 'AI 模型',
-          auth: '琪琪',
-          tag: '#翻譯'
-        },
-        {
-          imageUrl: 'https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool4.png?raw=true',
-          title: 'Sentiment Analysis API',
-          description: '自動識別文本中的情感傾向，包括正向、負向和中性等。適用於情感分析、社交媒體監控、市場調查等。',
-          subTitle: 'AI 模型',
-          auth: '昊昊',
-          tag: '#行銷'
-        },
-        {
-          imageUrl: 'https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool5.png?raw=true',
-          title: 'Fraud Detection Platform',
-          description: '預防詐騙活動，適用於銀行、金融、電商等。',
-          subTitle: 'AI 模型',
-          auth: '卡卡',
-          tag: '#客服'
-        },
-        {
-          imageUrl: 'https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool6.png?raw=true',
-          title: 'Voice Assistant SDK',
-          description: '通過語音控制應用程式、設備，實現多種功能，例如播放音樂、查詢天氣、發送信息等。',
-          subTitle: 'AI 模型',
-          auth: '杰杰',
-          tag: '#生產力'
-        }
-      ]
-    }
+  methods: {
+    ...mapActions(apiStore, ['getData'])
+  },
+  computed: {
+    ...mapState(apiStore, ['worksData', 'pagesData', 'tagName'])
+
+  },
+  created () {
+    console.log('669')
+    const data = {
+  type: '',
+  sort: 1,
+  page: 1,
+  search: '',
+}
+    this.getData(data)
+    console.log('669')
   }
 }
 </script>

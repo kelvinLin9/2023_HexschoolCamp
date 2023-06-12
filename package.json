@@ -1,5 +1,5 @@
 {
-  "name": "f2e_week1",
+  "name": "2023_HexschoolCamp",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,11 +9,13 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "axios": "^1.4.0",
     "bootstrap": "^5.2.2",
     "core-js": "^3.8.3",
     "gsap": "^3.11.3",
     "pinia": "^2.0.23",
     "vue": "^3.2.13",
+    "vue-axios": "^3.5.2",
     "vue-router": "^4.0.3",
     "vue3-lottie": "^2.4.0"
   },

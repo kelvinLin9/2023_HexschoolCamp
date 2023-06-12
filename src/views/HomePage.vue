@@ -1,21 +1,28 @@
 <template>
   <section class="header container">
-    <h1 class="Noto-Sans-TC-900 text-white fs-120 my-3">
-      透過<br>AI 工具王的<br>強大模型<br>讓您的業務<br class="d-block d-sm-none">更聰明
-    </h1>
-    <button type="button" class="btn btn-dark Noto-Sans-TC-900 text-white fs-20 my-3">
-      開始使用
-    </button>
+    <div class="row">
+      <div class="col-9">
+        <h1 class="Noto-Sans-TC-900 text-white fs-120 my-3">
+          透過<br>AI 工具王的<br>強大模型<br>讓您的業務<br class="d-block d-sm-none">更聰明
+        </h1>
+        <button type="button" class="btn btn-dark Noto-Sans-TC-900 text-white fs-20 my-3">
+          開始使用
+        </button>
+      </div>
+      <div class="col-12 col-sm-6 d-flex ms-auto justify-content-center justify-content-sm-end">
+        <GrassAnima/>
+      </div>
+    </div>
   </section>
   <section class="serve container my-5">
-    <div class="row my-5">
-        <div class="col-12 col-sm-4 Noto-Sans-TC-900 text-white fs-32 me-auto">
-          我們的服務
-        </div>
-        <div class="col-12 col-sm-8 d-flex justify-content-end Noto-Sans-TC-900 text-white fs-48">
-          我們相信透過 AI 技術，<br>
-          包括圖像識別、自然語<br>言處理和機器翻譯等，<br>讓您更快、更準確地做<br>出決策。
-        </div>
+    <div class="row">
+      <div class="col-12 col-sm-4 Noto-Sans-TC-900 text-white fs-32 me-auto">
+        我們的服務
+      </div>
+      <div class="col-12 col-sm-8 d-flex justify-content-end Noto-Sans-TC-900 text-white fs-48">
+        我們相信透過 AI 技術，<br>
+        包括圖像識別、自然語<br>言處理和機器翻譯等，<br>讓您更快、更準確地做<br>出決策。
+      </div>
     </div>
     <ul class="row my-5 list-group-horizontal gy-3">
       <li class="col-12 col-sm-4 d-flex align-items-stretch">
@@ -149,9 +156,11 @@
 
 <script>
 import AIApplication from '@/components/AIApplication.vue'
+import GrassAnima from '@/components/GrassAnima.vue'
 export default {
   components: {
-    AIApplication
+    AIApplication,
+    GrassAnima
   }
 }
 </script>

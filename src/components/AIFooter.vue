@@ -21,8 +21,8 @@
         </ul>
       </div>
       <div class="col-6 col-sm-2 d-flex ms-auto justify-content-end">
-        <div>
-          <span class="Noto-Sans-TC-900 text-white fs-16 text-decoration-none px-2">Back to top</span>
+        <div @click.prevent="top">
+          <span class="Noto-Sans-TC-900 text-white fs-16 text-decoration-none px-2" >Back to top</span>
           <img src="../assets/images/Vector10.png" alt="箭頭圖示">
         </div>
       </div>
@@ -39,14 +39,15 @@
 
 <script>
 export default {
-
+  methods: {
+    top () {
+      document.documentElement.scrollTop = 0
+    }
+  }
 }
 </script>
 
 <style scoped lang="scss">
-.footer {
-
-}
 .footer-top {
   border-bottom: solid 1px white;
 }
