@@ -4,5 +4,5 @@ module.exports = defineConfig({
 
   // 修正檔案命名問題
   lintOnSave: false,
-  publicPath: process.env.NODE_ENV === 'production' ? '/F2E_Week1/' : '/'
+  publicPath: process.env.NODE_ENV === 'production' ? '/2023_HexschoolCamp/' : '/'
 })
