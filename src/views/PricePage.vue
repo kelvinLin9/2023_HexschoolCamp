@@ -180,6 +180,30 @@
               </div>
             </div>
           </div>
+          <div class="accordion-item my-3">
+            <h2 class="accordion-header" id="heading4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                租用模型的期限是多久？
+              </button>
+            </h2>
+            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                租用模型的期限可以根據您的需求進行設置，通常可以選擇幾個小時、幾天或幾個月等不同的時間段。
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item my-3">
+            <h2 class="accordion-header" id="heading5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                如果在使用的過程中遇到問題，應該怎麼處理？
+              </button>
+            </h2>
+            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                如果在使用過程中遇到問題，您可以聯繫惡扶或技術支持人員進行諮詢或報告問題。您也可以。您也可以通過網站上的幫助中心或社區論壇尋找相關的解決方案和回答。
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -226,16 +250,11 @@ export default {
     }
   }
 }
-.qa {
-}
-.accordion-header {
-  
-}
 .accordion-button {
   background: #000;
   font-family: 'Noto Sans TC';
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 20px;
   line-height: 120%;
   color: #FFFFFF;
@@ -249,5 +268,8 @@ export default {
   font-size: 16px;
   line-height: 120%;
   color: #FFFFFF;
+}
+.collapsed {
+  border: 0.5px solid #919191;
 }
 </style>
