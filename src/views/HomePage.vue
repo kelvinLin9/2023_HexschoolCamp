@@ -48,94 +48,34 @@
       </li>
     </ul>
   </section>
-  <!-- <section class="evaluate container my-5">
-    <ul class="row">
-      <li class="col-4 d-flex align-items-stretch">
-        <div class="evaluate-bg">
-          <div class="evaluate-star">
-            <img src="../assets/images/Star.png" alt="">
-            <img src="../assets/images/Star.png" alt="">
-            <img src="../assets/images/Star.png" alt="">
-            <img src="../assets/images/Star.png" alt="">
-            <img src="../assets/images/Star.png" alt="">
-          </div>
-          <div>
-            <p class="Noto-Sans-TC-400 text-white fs-16">
-              非常喜歡 AI工具王 提供的 AI 模型租賃服務，使<br>用起來非常方便，而且效果非常好。對於我們<br>
-              公司的業務來說，這個服務非常重要，因為我<br>們需要大量的數據進行分析和預測，AI工具王<br>
-              提供的 AI 模型能夠幫助我們節省大量時間和成<br>本，實在是太棒了！
-            </p>
-          </div>
-          <div class="row">
-            <div class="col-2">
-              <img src="../assets/images/Ellipse3.png" alt="">
-            </div>
-            <div class="col">
-              <div class="Noto-Sans-TC-400 text-white fs-16">陳小姐</div>
-              <div class="Noto-Sans-TC-400 text-white fs-14">ABC科技有限公司</div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="col-4 d-flex align-items-stretch">
-        <div class="evaluate-bg">
-          <div class="evaluate-star">
-            <img src="../assets/images/Star.png" alt="">
-            <img src="../assets/images/Star.png" alt="">
-            <img src="../assets/images/Star.png" alt="">
-            <img src="../assets/images/Star.png" alt="">
-            <img src="../assets/images/Star.png" alt="">
-          </div>
-          <div>
-            <p class="Noto-Sans-TC-400 text-white fs-16">
-              作為一家醫療器材公司，我們非常關注人工智<br>能技術的應用，而 AI工具王 提供的 AI 模型租賃<br>
-              服務為我們帶來了很大的幫助。我們使用 AI工<br>具王 的模型進行醫學影像分析和預測，這些模 
-              型非常精確，能夠幫助我們更好地診斷病情，<br>提高治療效果。感謝 AI工具王 團隊的辛勤工<br>作！
-            </p>
-          </div>
-          <div class="row">
-            <div class="col-2">
-              <img src="../assets/images/Ellipse3-1.png" alt="">
-            </div>
-            <div class="col">
-              <div class="Noto-Sans-TC-400 text-white fs-16">劉小姐</div>
-              <div class="Noto-Sans-TC-400 text-white fs-14">XYZ 醫療器材有限公司</div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="col-4 d-flex align-items-stretch">
-        <div class="evaluate-bg">
-          <div class="evaluate-star">
-            <img src="../assets/images/Star.png" alt="">
-            <img src="../assets/images/Star.png" alt="">
-            <img src="../assets/images/Star.png" alt="">
-            <img src="../assets/images/Star.png" alt="">
-            <img src="../assets/images/Star.png" alt="">
-          </div>
-          <div>
-            <p class="Noto-Sans-TC-400 text-white fs-16">
-              我們銀行一直在尋找能夠幫助我們提高風險控<br>制和客戶服務的解決方案，而 AI工具王 提供的<br>
-              AI 模型租賃服務正好滿足了我們的需求。我們<br>使用 AI工具王 的模型進行客戶信用評估和詐騙<br>
-              檢測等任務，這些模型非常準確，能夠幫助我<br>們更好地控制風險，提高客戶滿意度。非常感<br>
-              謝 AI工具王 團隊的支持！
-            </p>
-          </div>
-          <div class="row">
-            <div class="col-2">
-              <img src="../assets/images/Ellipse3-2.png" alt="">
-            </div>
-            <div class="col">
-              <div class="Noto-Sans-TC-400 text-white fs-16">黃先生</div>
-              <div class="Noto-Sans-TC-400 text-white fs-14">EFG 銀行</div>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </section> -->
-  
+
   <EvaluateView/>
+
+  <section class="partner container my-5">
+    <div class="col-12 col-sm-4 Noto-Sans-TC-900 text-white fs-32 me-auto">
+        來自合作夥伴
+    </div>
+    <div class="partnerLogo mb-11 mb-lg-16">
+      <div class="overflow-auto pb-2">
+        <div class="d-flex">
+          <img src="../assets/images/enterprise.png" alt="合作夥伴">
+          <img src="../assets/images/enterprise1.png" alt="合作夥伴1">
+          <img src="../assets/images/enterprise2.png" alt="合作夥伴2">
+          <img src="../assets/images/enterprise3.png" alt="合作夥伴3">
+          <img src="../assets/images/enterprise4.png" alt="合作夥伴4">
+          <img src="../assets/images/enterprise5.png" alt="合作夥伴5">
+        </div>
+        <div class="d-flex">
+          <img src="../assets/images/enterprise6.png" alt="合作夥伴6">
+          <img src="../assets/images/enterprise7.png" alt="合作夥伴7">
+          <img src="../assets/images/enterprise8.png" alt="合作夥伴8">
+          <img src="../assets/images/enterprise9.png" alt="合作夥伴9">
+          <img src="../assets/images/enterprise11.png" alt="合作夥伴11">
+          <img src="../assets/images/enterprise12.png" alt="合作夥伴12">
+        </div>
+      </div>
+    </div>
+  </section>
   <AIApplication/>
 
   <section class="start-use container my-5">

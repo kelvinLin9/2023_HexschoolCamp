@@ -16,10 +16,15 @@
         <div class="filter col-12">
           <div class="row d-flex align-items-center">
             <div class="col-6 col-sm-2">
-              <button type="button">
+              <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 <span class="Noto-Sans-TC-400 fs-16 me-2">篩選</span>
                 <img src="../assets/images/Vector-16.png" alt="篩選圖示">
               </button>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+              </div>
             </div>
             <div class="col-8 d-none d-sm-block">
               <div class="d-flex justify-content-center">
@@ -166,6 +171,10 @@ export default {
     background: #FFFFFF;
     border-radius: 16px;
   }
+}
+.collapse {
+  width: 240px;
+  // padding: 20px 32px 20px 40px;
 }
 .card-container {
   border: 1px solid #F2F2F2;
