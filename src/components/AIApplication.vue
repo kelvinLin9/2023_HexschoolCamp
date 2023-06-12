@@ -53,11 +53,11 @@
           <div class="row">
             <div class="col-sm-4 col-12 gy-3 d-flex align-items-stretch"
                   v-for="item in worksData" :key="item.imageUrl">
-              <div class="card-container">
+              <div class="card card-container">
                 <div class="card-pic">
                   <img :src="item.imageUrl" alt="img">
                 </div>
-                <div class="card-title">
+                <div class="card-title card-body">
                   <p class="Noto-Sans-TC-900 fs-20">
                     {{ item.title }}
                   </p>
@@ -198,9 +198,10 @@ export default {
   }
   .card-sub-title {
     padding: 20px 32px 12px;
-    border-bottom: 1px solid #F2F2F2;
+    
   }
   .card-tag {
+    border-top: 1px solid #F2F2F2;
     padding: 20px 32px 12px;
   }
 }

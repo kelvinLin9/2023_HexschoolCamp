@@ -55,7 +55,7 @@
     <div class="col-12 col-sm-4 Noto-Sans-TC-900 text-white fs-32 me-auto">
         來自合作夥伴
     </div>
-    <div class="partnerLogo mb-11 mb-lg-16">
+    <div class="">
       <div class="overflow-auto pb-2">
         <div class="d-flex">
           <img src="../assets/images/enterprise.png" alt="合作夥伴">
