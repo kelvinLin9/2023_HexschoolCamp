@@ -15,7 +15,7 @@
         </div>
         <div class="filter col-12">
           <div class="row d-flex align-items-center">
-            <div class="col-6 col-sm-2 test">
+            <div class="col-6 col-sm-2">
               <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 <span class="Noto-Sans-TC-400 fs-16 me-2">篩選</span>
                 <img src="../assets/images/Vector-13.png" alt="漏斗圖示">
