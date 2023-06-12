@@ -6,13 +6,17 @@
           用多少，<br>付多少。
         </h2>
       </div>
-      <div class="col-6 d-flex ms-auto">
+      <div class="col-9 col-sm-6 d-flex ms-auto">
         <h3 class="Noto-Sans-TC-900 text-white fs-48">
           我們相信，最靈活的取用機制，才能最大化的幫助你業務的推動。
         </h3>
       </div>
     </div>
+    <div class="col-12 col-sm-6">
+      <GrassAnima/>
+    </div>
   </section>
+
   <section class="price container">
     <h4 class="Noto-Sans-TC-900 text-white fs-32 my-5">定價</h4>
     <div class="row row-cols-1 row-cols-sm-2 gy-3 ">
@@ -133,12 +137,12 @@
   <section class="qa container my-5">
     <div class="row">
       <div class="col-12 col-sm-4">
-        <h4 class="Noto-Sans-TC-900 text-white fs-32 my-5 mt-auto">使用規範</h4>
+        <h4 class="Noto-Sans-TC-900 text-white fs-32 my-5 mt-auto">常見問題</h4>
       </div>
       <div class="col-12 col-sm-8">
 
         <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
+          <div class="accordion-item my-3">
             <h2 class="accordion-header Noto-Sans-TC-900" id="headingOne">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 如何選擇適合的AI模型？
@@ -150,7 +154,7 @@
               </div>
             </div>
           </div>
-          <div class="accordion-item">
+          <div class="accordion-item my-3">
             <h2 class="accordion-header" id="headingTwo">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 租用模型的費用是如何計算的？
@@ -163,7 +167,7 @@
               </div>
             </div>
           </div>
-          <div class="accordion-item">
+          <div class="accordion-item my-3">
             <h2 class="accordion-header" id="headingThree">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 如何進行付款？
@@ -184,9 +188,11 @@
 
 <script>
 import AIApplication from '@/components/AIApplication.vue'
+import GrassAnima from '@/components/GrassAnima.vue'
 export default {
   components: {
-    AIApplication
+    AIApplication,
+    GrassAnima
   }
 }
 </script>
@@ -223,6 +229,25 @@ export default {
 .qa {
 }
 .accordion-header {
-  font-size: 120px;
+  
+}
+.accordion-button {
+  background: #000;
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 120%;
+  color: #FFFFFF;
+  border: 0.5px solid #919191;
+}
+.accordion-body {
+  background: #000;
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #FFFFFF;
 }
 </style>
