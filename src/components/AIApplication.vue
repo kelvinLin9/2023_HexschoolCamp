@@ -15,10 +15,10 @@
         </div>
         <div class="filter col-12">
           <div class="row d-flex align-items-center">
-            <div class="col-6 col-sm-2">
+            <div class="col-6 col-sm-2 test">
               <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 <span class="Noto-Sans-TC-400 fs-16 me-2">篩選</span>
-                <img src="../assets/images/Vector-16.png" alt="篩選圖示">
+                <img src="../assets/images/Vector-13.png" alt="漏斗圖示">
               </button>
               <div class="collapse" id="collapseExample">
                 <div class="card card-body">
@@ -156,7 +156,7 @@ export default {
 }
 .filter{
   width: 1296px;
-  padding: 44px 40px 40px;
+  padding: 44px 0  40px;
   button {
     width: 132px;
     height: 64px;
